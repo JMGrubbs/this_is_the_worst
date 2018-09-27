@@ -1,0 +1,11 @@
+<%= form_with model: @recipe do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, User.all, :id, :name %>
+    <%= f.fields_for :ingredients do |ing| %>
+        <%= ing.text_field :name %>
+        <%= ing.text_field :name %>
+    <% end %>
+    <%= f.submit %>
+<% end %>
