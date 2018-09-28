@@ -1,0 +1,4 @@
+<% @ingredients.each do |i| %>
+    <p><%= i.name %></p>
+    <%= i.recipe_ingredients.count %>
+<% end %>
